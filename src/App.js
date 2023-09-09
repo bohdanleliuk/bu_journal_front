@@ -1,11 +1,14 @@
+import "./App.scss";
+import SideBar from "./components/SideBar/SideBar";
+import { Title } from "./components/Title/Title";
 
 const App = () => {
-
+  
     return (
-        <div>
-            Hello World!
-        </div>
-    )
-}
+    <div className="app">
+        <SideBar/>
+    </div>
+  );
+};
 
 export default App;
