@@ -1,6 +1,9 @@
 @import '../../colors';
 
 .side-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     background-color: $white-70;
     width:280px;
@@ -13,4 +16,16 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 30px;
+}
+
+@media (max-width: 670px) {
+    .side-bar {
+        width: 100vw;
+        height: 80px;
+    }
+
+    .flex-container {
+        flex-direction: row;
+        padding: 15px;
+    }
 }

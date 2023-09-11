@@ -2,12 +2,66 @@
 @import-normalize;
 
 .app {
-    background-color: $main-background;
     position: absolute;
     left:0;
     top:0;
     width: 100vw;
-    height: 100vh;
     margin: 0;
     padding: 0;
+    display: flex; 
+}
+
+.side-left {
+    width: 280px;
+}
+
+.side-right {
+    max-width: 300px;
+}
+
+.container-flex {
+    margin: 40px 20px;
+    flex: 3;
+    display: grid;
+    grid-template-columns: minmax(350px, 750px) minmax(350px, 750px);
+    grid-template-rows: repeat(auto-fill);
+    // grid-auto-flow: column;
+    gap: 20px;
+}
+
+.block {
+    height: 65px;
+    width: 100%;
+    background-color: $white-50;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    box-shadow: 0px 4px 8px 0px rgba(38, 81, 144, 0.20);
+}
+
+.big-block {
+    height: 300px;
+}
+
+@media (max-width: 1040px) {
+    .container-flex {
+        grid-template-columns: minmax(350px, 750px);
+    }
+}
+
+@media (max-width: 670px) {
+    .side-left {
+        display: none;
+    }
+    .side-right {
+        display: none;
+    }
+    .app {
+        flex-direction: column;
+    }
+    .container-flex {
+        margin-top: 110px;
+    }
 }
