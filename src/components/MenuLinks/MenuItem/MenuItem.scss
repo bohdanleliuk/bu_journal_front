@@ -1,0 +1,31 @@
+@import '../../../colors';
+
+.menu-item {
+    width: 180px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon {
+    height: 16px;
+    width: 16px;
+    background-color: $main-text;
+    border-radius: 50%;
+}
+
+.text {
+    font-size: 1rem;
+}
+
+.active {
+    background-color: $main-accent;
+    &>.icon {
+        background-color: $white-100;
+    }
+    &>.text {
+        color: $white-100;
+    }
+}

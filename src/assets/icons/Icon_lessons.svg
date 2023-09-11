@@ -1,0 +1,10 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon_lessons">
+<path id="Path 17" d="M7 1.5H15" stroke="black" stroke-linecap="round"/>
+<path id="Path 18" d="M7 8H15" stroke="black" stroke-linecap="round"/>
+<path id="Path 2" d="M7 14.5H15" stroke="black" stroke-linecap="round"/>
+<path id="Oval" fill-rule="evenodd" clip-rule="evenodd" d="M1.30766 2.66666C2.02985 2.66666 2.61531 2.06971 2.61531 1.33333C2.61531 0.596952 2.02985 0 1.30766 0C0.585457 0 0 0.596952 0 1.33333C0 2.06971 0.585457 2.66666 1.30766 2.66666Z" fill="black"/>
+<path id="Oval_2" fill-rule="evenodd" clip-rule="evenodd" d="M1.30766 9.33327C2.02985 9.33327 2.61531 8.73632 2.61531 7.99994C2.61531 7.26356 2.02985 6.66661 1.30766 6.66661C0.585457 6.66661 0 7.26356 0 7.99994C0 8.73632 0.585457 9.33327 1.30766 9.33327Z" fill="black"/>
+<path id="Oval_3" fill-rule="evenodd" clip-rule="evenodd" d="M1.30766 16C2.02985 16 2.61531 15.4031 2.61531 14.6667C2.61531 13.9303 2.02985 13.3333 1.30766 13.3333C0.585457 13.3333 0 13.9303 0 14.6667C0 15.4031 0.585457 16 1.30766 16Z" fill="black"/>
+</g>
+</svg>
