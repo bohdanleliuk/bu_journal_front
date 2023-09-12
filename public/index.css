@@ -474,3 +474,8 @@ textarea {
     font-size: 18px;
   }
 }
+
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}

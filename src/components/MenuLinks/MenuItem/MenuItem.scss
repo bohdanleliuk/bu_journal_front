@@ -22,10 +22,10 @@
 
 .active {
     background-color: $main-accent;
-    &>.icon {
-        background-color: $white-100;
-    }
-    &>.text {
+    .text {
         color: $white-100;
+    }
+    img {
+        filter: invert(1);
     }
 }

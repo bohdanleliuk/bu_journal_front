@@ -19,7 +19,7 @@
 
 .icons-container {
     display: flex;
-    gap: 15px;
+    gap: 8px;
 }
 
 .card-icon {
@@ -36,10 +36,4 @@
    -webkit-line-clamp: 2; /* number of lines to show */
            line-clamp: 2;
    -webkit-box-orient: vertical;
-}
-
-.sign {
-    font-size: 0.75rem;
-    color: $main-text;
-    opacity: 0.5;
 }

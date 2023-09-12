@@ -1,0 +1,12 @@
+@import '../../colors';
+
+.file-tab {
+    padding: 8px 10px;
+    border-radius: 8px;
+    background-color: $white-100;
+    border: 1px solid $white-100;
+
+    &:hover {
+        border: 1px solid $main-accent;
+    }
+}
