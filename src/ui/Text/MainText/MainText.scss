@@ -1,0 +1,13 @@
+@import '../../../style_constants';
+
+.main-text {
+    font-size: $main-text-size-m;
+    color: $main-text;
+}
+
+// overflow: hidden;
+//    text-overflow: ellipsis;
+//    display: -webkit-box;
+//    -webkit-line-clamp: 2; /* number of lines to show */
+//            line-clamp: 2;
+//    -webkit-box-orient: vertical;

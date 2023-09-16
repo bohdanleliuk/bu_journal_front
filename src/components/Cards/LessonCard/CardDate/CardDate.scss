@@ -1,0 +1,17 @@
+@import '../../../../style_constants';
+
+.lesson-card-date {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3.1rem;
+    background-color: $white-50;
+    border-radius: 16px 0px 0px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75rem;
+}

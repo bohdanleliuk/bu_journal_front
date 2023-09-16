@@ -1,14 +1,41 @@
 import React, { useState } from "react";
 import "./LessonCard.scss";
-import ButtonIcon from "../../Buttons/ButtonIcon/ButtonIcon";
-import Icon_lessons from "../../../assets/icons/Icon_lessons.svg";
-import Icon_journal from "../../../assets/icons/Icon_journal.svg";
-import Icon_edit from "../../../assets/icons/Icon_edit.svg";
-import Icon_delete from "../../../assets/icons/Icon_delete.svg";
-import Down_button from "../../../assets/icons/Down_button.svg";
-import FileTab from "../../FileTab/FileTab";
+import Card from "../../../ui/Crad/Card";
+import AdditionalInfo from "./AdditionalInfo/AdditionalInfo";
+import CardDate from "./CardDate/CardDate";
+import MainText from '../../../ui/Text/MainText/MainText';
+import TextSign from "../../../ui/Text/TextSign/TextSign";
+import IconsController from "../../IconsController/IconsController";
 
-const LessonCard = ({ lesson, type, dateStart, timeStart, editAccess }) => {
+const LessonCard = ({ lesson, editAccess }) => {
+
+  lesson = {
+    "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "name": "Culture of speaking",
+    "type": "lecture",
+    "date": "2023-09-16T14:56:26.597Z",
+    "subject": {
+      "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "name": "Nature Science",
+      "teacher": {
+        "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "lastName": "Leliuk",
+        "firstName": "Bohdan",
+        "patronymic": "Petrovich"
+      },
+      "group": {
+        "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "name": "KM-501",
+        "currator": {
+          "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+          "lastName": "Leliuk",
+          "firstName": "Bohdan",
+          "patronymic": "Petrovich"
+        }
+      }
+    }
+  }
+
   const [isOpen, setIsOpen] = useState(false);
 
   function handleDropDown() {
@@ -16,50 +43,19 @@ const LessonCard = ({ lesson, type, dateStart, timeStart, editAccess }) => {
   }
 
   return (
-    <div className="lesson-card-block">
-      <div className="lesson-card-date">
-        <div>{dateStart}</div>
-        <div>{timeStart}</div>
-      </div>
+    <Card colunm>
+      <CardDate date={lesson.date}/>
       <div className="lesson-card-wrapper">
         <div className="lesson-card-title-container">
-          <div className={!isOpen ? "lesson-card-main-text" : "lesson-card-main-text main-text-opened"}>{lesson}</div>
-          {type && <div className="lesson-card-sign">{type}</div>}
+          <MainText>{lesson.name}</MainText>
+          <TextSign>{lesson.type}</TextSign>
         </div>
-        <div className="lesson-card-icons-container">
-          {editAccess && <ButtonIcon icon={Icon_edit} />}
-          {editAccess && <ButtonIcon icon={Icon_delete} />}
-          <div
-            className={
-              !isOpen
-                ? "lesson-card-down-button"
-                : "lesson-card-down-button-opened"
-            }
-            onClick={handleDropDown}
-          >
-            <ButtonIcon icon={Down_button} />
-          </div>
-        </div>
+        <IconsController lesson={lesson} handleDropDown={handleDropDown} isOpen={isOpen}/>
       </div>
       {isOpen && (
-        <div className="lesson-card-additional-info">
-          <div className="lesson-card-additional-info-prop">
-            <div style={{'minWidth': '120px', 'opacity': '0.5'}}>Викладач</div>
-            <div style={{'flex': '1', 'minWidth': '120px'}}>Расщектаєв Антон Володимирович</div>
-          </div>
-          <div className="lesson-card-additional-info-prop">
-            <div style={{'minWidth': '120px', 'opacity': '0.5'}}>Тема заняття</div>
-            <div style={{'flex': '1', 'minWidth': '120px'}}>Основи кастомки</div>
-          </div>
-          <div className="lesson-card-additional-info-files">
-            <FileTab/>
-            <FileTab/>
-            <FileTab/>
-            <FileTab/>
-          </div>
-        </div>
+        <AdditionalInfo lesson={lesson}/>
       )}
-    </div>
+    </Card>
   );
 };
 

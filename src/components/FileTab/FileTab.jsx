@@ -1,13 +1,14 @@
 import React from 'react';
 import './FileTab.scss';
 import Icon_attach from '../../assets/icons/Icon_attach.svg';
-import ButtonIcon from '../Buttons/ButtonIcon/ButtonIcon';
+import ButtonIcon from '../../ui/ButtonIcon/ButtonIcon';
+import Tab from '../../ui/Tab/Tab';
 
 const FileTab = () => {
   return (
-    <div className='file-tab'>
+    <Tab>
         <ButtonIcon text="file.png" icon={Icon_attach}/>
-    </div>
+    </Tab>
   )
 }
 

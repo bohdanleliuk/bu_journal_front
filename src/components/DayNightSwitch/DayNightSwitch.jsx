@@ -1,10 +1,11 @@
 import React from 'react';
 import './DayNightSwitch.scss';
+import Switch from '../../ui/Switch/Switch';
 
 
 const DayNightSwitch = () => {
   return (
-    <div className="switch" style={{'width': '60px', 'height': '32px', 'backgroundColor': 'black', 'borderRadius': '16px'}}></div>
+    <Switch/>
   )
 }
 

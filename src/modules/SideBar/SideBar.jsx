@@ -1,10 +1,10 @@
 import React from "react";
 import "./SideBar.scss";
-import { Title } from "../Title/Title";
-import UserInfo from "../UserInfo/UserInfo";
-import MenuLinks from "../MenuLinks/MenuLinks";
-import DayNightSwitch from "../DayNightSwitch/DayNightSwitch";
-import ButtonIcon from "../Buttons/ButtonIcon/ButtonIcon";
+import { Title } from "../../ui/Text/Title/Title";
+import UserInfo from "../../components/UserInfo/UserInfo";
+import MenuLinks from "../../components/MenuLinks/MenuLinks";
+import DayNightSwitch from "../../components/DayNightSwitch/DayNightSwitch";
+import ButtonIcon from "../../ui/ButtonIcon/ButtonIcon";
 import ExitIcon from "../../assets/icons/Icon_exit.svg";
 
 const SideBar = () => {

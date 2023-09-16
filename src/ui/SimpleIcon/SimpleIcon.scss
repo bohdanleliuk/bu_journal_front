@@ -1,0 +1,9 @@
+@import '../../style_constants';
+
+.simple-icon {
+    height: $icon-size;
+    width: $icon-size;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

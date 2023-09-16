@@ -1,0 +1,13 @@
+@import '../../style_constants';
+
+.card {
+    padding: $padding-m;
+    background-color: $white-50;
+    border-radius: $border-radius-m;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: $gap-m;
+    box-shadow: $dark-blue-shadow;
+    position: relative;
+}
