@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
-import './Title.scss';
+import styles from './Title.module.scss';
 
 
-export const Title = ({children}) => {
+const Title = ({children}) => {
 
   return (
-    <h1 className='title'>{children}</h1>
+    <h1 className={styles.title}>{children}</h1>
  )
 }
+
+export default Title;

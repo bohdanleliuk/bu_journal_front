@@ -1,11 +1,11 @@
 import React from 'react';
-import './MenuItem.scss';
+import styles from './MenuItem.module.scss';
 
 const MenuItem = ({icon, text, active}) => {
   return (
-    <div className={ !active ? 'menu-item' : 'menu-item active'}>
+    <div className={ !active ? styles.menuItem : [styles.menuItem, styles.active].join(' ')}>
         <img src={icon} alt={`${icon.name}`}/>
-        <div className='text'>{text}</div>
+        <div className={styles.text}>{text}</div>
     </div>
   )
 }

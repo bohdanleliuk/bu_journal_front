@@ -1,16 +1,14 @@
 import React from 'react';
-import './MenuLinks.scss';
+import styles from './MenuLinks.module.scss';
 import MenuItem from './MenuItem/MenuItem';
-import SubjectsIcon from '../../assets/icons/Icon_subjects.svg';
-import ScheduleIcon from '../../assets/icons/Icon_schedule.svg';
-import ContactIcon from '../../assets/icons/Icon_contact.svg';
+import {IconSubjects, IconShedule, IconContact} from '../../assets/icons';
 
 const MenuLinks = () => {
   return (
-    <div className='menu'>
-        <MenuItem icon={SubjectsIcon} text="Предмети" active={true}/>
-        <MenuItem icon={ScheduleIcon} text="Розклад" active={false}/>
-        <MenuItem icon={ContactIcon} text="Контакти" active={false}/>
+    <div className={styles.menu}>
+        <MenuItem icon={IconSubjects} text="Предмети" active={true}/>
+        <MenuItem icon={IconShedule} text="Розклад" active={false}/>
+        <MenuItem icon={IconContact} text="Контакти" active={false}/>
     </div>
   )
 }

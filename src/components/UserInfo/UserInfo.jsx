@@ -1,13 +1,14 @@
 import React from "react";
-import './UserInfo.scss';
+import styles from './UserInfo.module.scss';
+import { MainText, TextSign } from "../../ui";
 
 const UserInfo = ({user}) => {
   return (
-    <div className="user-info">
-      <div className="logo">BU</div>
-      <div className="user">
-        <div className="user-name">{user.name}</div>
-        <div className="user-role">{user.role}</div>
+    <div className={styles.userInfo}>
+      <div className={styles.logo}>BU</div>
+      <div className={styles.user}>
+        <MainText>{user.name}</MainText>
+        <TextSign>{user.role}</TextSign>
       </div>
     </div>
   );

@@ -1,9 +1,9 @@
 import React from 'react';
-import './TextSign.scss';
+import styles from './TextSign.module.scss';
 
 const TextSign = ({children}) => {
   return (
-    <div className="text-sign">{children}</div>
+    <div className={styles.textSign}>{children}</div>
   )
 }
 

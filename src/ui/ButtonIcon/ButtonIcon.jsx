@@ -1,11 +1,12 @@
 import React from 'react';
-import './ButtonIcon.scss';
+import styles from './ButtonIcon.module.scss';
+import MainText from '../Text/MainText/MainText';
 
 const ButtonIcon = ({text, icon}) => {
   return (
-    <div className='button-icon'>
-        {text && <div className='button-icon-text'>{text}</div>}
-        <div className='button-icon-icon'>
+    <div className={styles.buttonIconContainer}>
+        {text && <MainText>{text}</MainText>}
+        <div className={styles.icon}>
           <img src={icon}/>
         </div>
     </div>

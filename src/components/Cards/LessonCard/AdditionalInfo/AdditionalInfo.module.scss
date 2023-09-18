@@ -1,16 +1,16 @@
-.lesson-card-additional-info {
+.info {
     display: flex;
     flex-direction: column;
     gap: 10px;
     font-size: 0.875rem;
 }
 
-.lesson-card-additional-info-prop {
+.prop {
     display: flex;
     flex-wrap: wrap;
 }
 
-.lesson-card-additional-info-files {
+.files {
     margin-top: 10px;
     display: flex;
     gap: 10px;

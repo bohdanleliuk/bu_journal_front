@@ -1,17 +1,13 @@
 @import '../../../style_constants';
 
-.lesson-card-wrapper {
+.wrapper {
     display: flex;
     gap: 20px;
     justify-content: space-between;
     align-items: center;
 }
 
-.lesson-card-title-container {
+.container {
     display: flex;
     flex-direction: column;
-}
-
-.lesson-card-down-button-opened {
-    transform: rotate(180deg);
 }

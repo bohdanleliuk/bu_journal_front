@@ -1,6 +1,6 @@
 import React from 'react';
-import './DayNightSwitch.scss';
-import Switch from '../../ui/Switch/Switch';
+import styles from './DayNightSwitch.module.scss';
+import { Switch } from '../../ui';
 
 
 const DayNightSwitch = () => {

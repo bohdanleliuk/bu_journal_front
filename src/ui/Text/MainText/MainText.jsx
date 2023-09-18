@@ -1,9 +1,9 @@
 import React from 'react';
-import './MainText.scss'
+import styles from './MainText.module.scss';
 
 const MainText = ({children}) => {
   return (
-    <div className='main-text'>{children}</div>
+    <div className={styles.text}>{children}</div>
   )
 }
 

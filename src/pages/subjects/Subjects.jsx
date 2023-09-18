@@ -1,8 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import response from "../../testdata/subjects";
-import SubjectCard from '../../components/Cards/SubjectCard/SubjectCard';
-import LessonCard from '../../components/Cards/LessonCard/LessonCard';
+import { SubjectCard, LessonCard } from '../../components';
 import styles from './Subjects.module.scss';
 
 const Subjects = () => {
@@ -16,7 +15,6 @@ const Subjects = () => {
         });
       }, []);
 
-    console.log(subjects);
 
   return (
         <div className={styles.contentContainer}>

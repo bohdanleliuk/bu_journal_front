@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import "./LessonCard.scss";
-import Card from "../../../ui/Crad/Card";
+import styles from "./LessonCard.module.scss";
+import { Card, MainText, TextSign} from "../../../ui";
 import AdditionalInfo from "./AdditionalInfo/AdditionalInfo";
 import CardDate from "./CardDate/CardDate";
-import MainText from '../../../ui/Text/MainText/MainText';
-import TextSign from "../../../ui/Text/TextSign/TextSign";
 import IconsController from "../../IconsController/IconsController";
 
 const LessonCard = ({ lesson, editAccess }) => {
@@ -45,8 +43,8 @@ const LessonCard = ({ lesson, editAccess }) => {
   return (
     <Card colunm>
       <CardDate date={lesson.date}/>
-      <div className="lesson-card-wrapper">
-        <div className="lesson-card-title-container">
+      <div className={styles.wrapper}>
+        <div className={styles.container}>
           <MainText>{lesson.name}</MainText>
           <TextSign>{lesson.type}</TextSign>
         </div>

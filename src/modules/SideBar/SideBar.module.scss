@@ -1,6 +1,6 @@
 @import '../../style_constants';
 
-.side-bar {
+.sideBar {
     position: fixed;
     top: 0;
     left: 0;
@@ -10,7 +10,7 @@
     height: 100vh;
 }
 
-.side-bar-container {
+.container {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -18,20 +18,20 @@
     padding: 30px;
 }
 
-.side-bar-top-container {
+.topContainer {
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
-.side-bar-buttom-container {
+.buttomContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
 }
 
-.burger-menu {
+.burgerMenu {
     display: none;
     width: 20px;
     height: 16px;
@@ -40,21 +40,21 @@
 }
 
 @media (max-width: 670px) {
-    .side-bar {
+    .sideBar {
         width: 100vw;
         height: 80px;
     }
 
-    .side-bar-container {
+    .container {
         flex-direction: row;
         padding: 15px;
     }
 
-    .button-exit {
+    .buttonExit {
         display: none;
     }
     
-    .burger-menu {
+    .burgerMenu {
         display: block;
     }
 }

@@ -1,20 +1,16 @@
 import React from 'react';
-import './IconsController.scss';
-import ButtonIcon from '../../ui/ButtonIcon/ButtonIcon';
-import Icon_edit from '../../assets/icons/Icon_edit.svg';
-import Icon_delete from '../../assets/icons/Icon_delete.svg';
-import Down_button from '../../assets/icons/Down_button.svg';
+import styles from './IconsController.module.scss';
+import {IconEdit, IconDelete, DownButton} from '../../assets/icons';
+import { SimpleIcon } from '../../ui';
 
 const IconsController = ({lesson, handleDropDown}) => {
 
-    console.log(handleDropDown);
-
   return (
-    <div className='icons-controller'>
-        <ButtonIcon icon={Icon_edit} />
-        <ButtonIcon icon={Icon_delete} />
+    <div className={styles.iconsController}>
+        <SimpleIcon icon={IconEdit} />
+        <SimpleIcon icon={IconDelete} />
         <div onClick={handleDropDown}>
-            <ButtonIcon icon={Down_button} />
+            <SimpleIcon icon={DownButton} />
         </div>
     </div>
   )

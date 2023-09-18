@@ -1,9 +1,13 @@
 @import '../../style_constants';
 
-.simple-icon {
+.simpleIcon {
     height: $icon-size;
     width: $icon-size;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &:hover {
+        opacity: 0.5;
+    }
 }

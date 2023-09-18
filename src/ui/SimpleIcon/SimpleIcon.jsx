@@ -1,9 +1,9 @@
 import React from 'react';
-import './SimpleIcon.scss';
+import styles from './SimpleIcon.module.scss';
 
 const SimpleIcon = ({icon}) => {;
   return (
-    <div className='simple-icon'>
+    <div className={styles.simpleIcon}>
         <img src={icon}/>
     </div>
   )

@@ -1,10 +1,10 @@
 import React from 'react'
-import './Card.scss';
+import styles from './Card.module.scss';
 
 const Card = ({children, colunm}) => {
   
   return (
-    <div className='card' style={colunm &&
+    <div className={styles.card} style={colunm &&
       {
         'flexDirection': 'column',
         'justifyContent': 'start',
