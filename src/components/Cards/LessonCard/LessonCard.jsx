@@ -5,7 +5,7 @@ import AdditionalInfo from "./AdditionalInfo/AdditionalInfo";
 import CardDate from "./CardDate/CardDate";
 import IconsController from "../../IconsController/IconsController";
 
-const LessonCard = ({ lesson, editAccess }) => {
+const LessonCard = ({ lesson }) => {
 
   lesson = {
     "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
@@ -34,6 +34,14 @@ const LessonCard = ({ lesson, editAccess }) => {
     }
   }
 
+  const iconsHandler = {
+    handleJournal: () => {},
+    handleLessons: () => {},
+    handleEdit: () => {},
+    handleDelete: () => {},
+    handleDropDown: handleDropDown,
+  };
+
   const [isOpen, setIsOpen] = useState(false);
 
   function handleDropDown() {
@@ -48,7 +56,7 @@ const LessonCard = ({ lesson, editAccess }) => {
           <MainText>{lesson.name}</MainText>
           <TextSign>{lesson.type}</TextSign>
         </div>
-        <IconsController lesson={lesson} handleDropDown={handleDropDown} isOpen={isOpen}/>
+        <IconsController iconsHandler={iconsHandler}/>
       </div>
       {isOpen && (
         <AdditionalInfo lesson={lesson}/>
