@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import response from "../../testdata/subjects";
-import { SubjectCard, LessonCard } from '../../components';
+import { SubjectCard } from '../../components';
 import styles from './Subjects.module.scss';
 
 const Subjects = () => {
@@ -22,7 +22,7 @@ const Subjects = () => {
             <SubjectCard/>
           </div>
           <div className={styles.column}>
-            <LessonCard/>
+            <SubjectCard/>
           </div>
         </div>
 );
