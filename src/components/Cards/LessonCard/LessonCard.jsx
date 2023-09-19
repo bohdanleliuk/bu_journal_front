@@ -35,8 +35,6 @@ const LessonCard = ({ lesson }) => {
   }
 
   const iconsHandler = {
-    handleJournal: () => {},
-    handleLessons: () => {},
     handleEdit: () => {},
     handleDelete: () => {},
     handleDropDown: handleDropDown,
