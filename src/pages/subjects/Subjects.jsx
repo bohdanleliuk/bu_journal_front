@@ -9,11 +9,10 @@ const Subjects = () => {
 
     console.log(process.env.REACT_APP_API_SERVER_URL);
 
-    const [editAccess, setEditAccess] = useState(true);
     const [subjects, setSubjects] = useState([]);
 
     useEffect(() => {
-        axios.get(`${process.env.REACT_APP_API_SERVER_URL}/teachers`).then((res) => console.log(res.data));
+        axios.get(`${process.env.REACT_APP_API_SERVER_URL}/subjects`).then((res) => setSubjects(res));
       }, []);
 
 
