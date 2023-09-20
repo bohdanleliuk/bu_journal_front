@@ -7,19 +7,19 @@ import axios from 'axios';
 
 const Subjects = () => {
 
-    console.log(process.env.REACT_APP_API_SERVER_URL);
+  const [subjects, setSubjects] = useState([]);
 
-    const [subjects, setSubjects] = useState([]);
-
-    useEffect(() => {
-        axios.get(`${process.env.REACT_APP_API_SERVER_URL}/subjects`).then((res) => setSubjects(res));
-      }, []);
-
+  useEffect(() => {
+        axios.get(`${process.env.REACT_APP_API_SERVER_URL}/subjects`).then((res) => {
+          let arr = Array.from([res.data, res.data]);
+          setSubjects(arr);
+        });
+  }, []);
 
   return (
         <div className={styles.contentContainer}>
           <div className={styles.column}>
-            <SubjectCard/>
+            {subjects.map((subject) => <SubjectCard subject={subject}/>)}
           </div>
           <div className={styles.column}>
             <SubjectCard/>
