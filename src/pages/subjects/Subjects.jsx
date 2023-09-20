@@ -1,18 +1,19 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import response from "../../testdata/subjects";
-import { SubjectCard } from '../../components';
 import styles from './Subjects.module.scss';
+import { SubjectCard } from '../../components';
+import axios from 'axios';
+
 
 const Subjects = () => {
+
+    console.log(process.env.REACT_APP_API_SERVER_URL);
 
     const [editAccess, setEditAccess] = useState(true);
     const [subjects, setSubjects] = useState([]);
 
     useEffect(() => {
-        response.then((res) => {
-          setSubjects(res);
-        });
+        axios.get(`${process.env.REACT_APP_API_SERVER_URL}/teachers`).then((res) => console.log(res.data));
       }, []);
 
 

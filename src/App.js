@@ -4,6 +4,7 @@ import SideBar from "./modules/SideBar/SideBar";
 import Subjects from "./pages/subjects/Subjects";
 
 const App = () => {
+
   const [editAccess, setEditAccess] = useState(true);
 
   return (
