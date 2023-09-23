@@ -1,8 +1,19 @@
 import "./App.scss";
 import SideBar from "./modules/SideBar/SideBar";
-import { Outlet } from "react-router-dom";
+import { Outlet, ScrollRestoration, useLocation, useNavigate } from "react-router-dom";
+import Subjects from "./pages/subjects/Subjects";
+import { useEffect, useRef } from "react";
 
 const App = () => {
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname == '/') {
+      navigate('/subjects');
+    }
+  }, [])
 
   return (
     <div className="app">

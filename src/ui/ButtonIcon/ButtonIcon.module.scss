@@ -4,10 +4,10 @@
     align-items: center;
     justify-content: center;
     transition: 0.1s ease-in;
-
+    cursor: pointer;
 
     &:hover {
-        opacity: 0.5;
+        opacity: 0.7;
     }
 }
 

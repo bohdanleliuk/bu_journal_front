@@ -8,6 +8,8 @@ import IconJournal from './Icon_journal.svg';
 import IconLessons from './Icon_lessons.svg';
 import IconShedule from './Icon_schedule.svg';
 import IconSubjects from './Icon_subjects.svg';
+import MenuIcon from './Menu_icon.svg';
+import CloseIcon from './Close_icon.svg';
 
 export {
     DownButton,
@@ -20,4 +22,6 @@ export {
     IconLessons,
     IconShedule,
     IconSubjects,
+    MenuIcon,
+    CloseIcon,
 }

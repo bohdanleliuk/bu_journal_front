@@ -4,6 +4,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1;
     display: flex;
     background-color: $white-70;
     width:280px;
@@ -16,6 +17,16 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 30px;
+}
+
+.containerSide {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding: 30px;
+    gap: 60px;
 }
 
 .topContainer {
@@ -33,20 +44,22 @@
 
 .burgerMenu {
     display: none;
-    width: 20px;
-    height: 16px;
-    background-color: black;
-    opacity: 0.5;
+}
+
+.sideMenu {
+    display: none;
 }
 
 @media (max-width: 670px) {
     .sideBar {
         width: 100vw;
         height: 80px;
+        backdrop-filter: blur(5px);
     }
 
     .container {
         flex-direction: row;
+        align-items: center;
         padding: 15px;
     }
 
@@ -55,6 +68,23 @@
     }
     
     .burgerMenu {
+        position: relative;
+        z-index: 2;
         display: block;
+    }
+
+    .sideMenu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        background-color:$white-100;
+        width: 100vw;
+        height: 100vh;
+        margin: auto;
+    }
+
+    .menuLinks {
+        display: none;
     }
 }

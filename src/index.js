@@ -18,17 +18,17 @@ const router = createBrowserRouter([
       {
         path: 'subjects',
         element: <Subjects/>,
-        errorElement: <ErrorPage/>
+        errorElement: <ErrorPage/>,
       },
       {
-        path: 'lessons/:subjectId',
-        element: <Lessons/>,
-        errorElement: <ErrorPage/>
-      },
-      {
-        path: 'journal/:subjectId',
+        path: 'subjects/journal/:subjectId',
         element: <Journal/>,
-        errorElement: <ErrorPage/>
+        errorElement: <ErrorPage/>,
+      },
+      {
+        path: 'subjects/lessons/:subjectId',
+        element: <Lessons/>,
+        errorElement: <ErrorPage/>,
       },
       {
         path: 'schedule',
