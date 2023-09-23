@@ -3,7 +3,6 @@ import SubjectCard from "./Cards/SubjectCard/SubjectCard";
 import DayNightSwitch from './DayNightSwitch/DayNightSwitch';
 import FileTab from "./FileTab/FileTab";
 import IconsController from "./IconsController/IconsController";
-import MenuLinks from './MenuLinks/MenuLinks';
 import UserInfo from './UserInfo/UserInfo';
 
 export {
@@ -12,6 +11,5 @@ export {
     DayNightSwitch,
     FileTab,
     IconsController,
-    MenuLinks,
     UserInfo,
 }

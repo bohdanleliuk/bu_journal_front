@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./SideBar.module.scss";
-import { DayNightSwitch, MenuLinks, UserInfo } from "../../components";
+import { DayNightSwitch, UserInfo } from "../../components";
+import MenuLinks from "./MenuLinks/MenuLinks";
 import {ButtonIcon} from "../../ui";
 import { IconExit } from "../../assets/icons";
 
