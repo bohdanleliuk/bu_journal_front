@@ -6,7 +6,7 @@
     left: 0;
     z-index: 1;
     display: flex;
-    background-color: $white-70;
+    background-color: $white-100;
     width:280px;
     height: 100vh;
 }
@@ -54,7 +54,7 @@
     .sideBar {
         width: 100vw;
         height: 80px;
-        backdrop-filter: blur(5px);
+        box-shadow: $dark-blue-shadow;
     }
 
     .container {

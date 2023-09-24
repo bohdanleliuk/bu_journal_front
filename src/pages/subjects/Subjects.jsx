@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { useState, useEffect } from 'react';
 import styles from './Subjects.module.scss';
 import { SubjectCard } from '../../components';
@@ -11,7 +11,7 @@ const Subjects = () => {
 
   useEffect(() => {
         axios.get(`${process.env.REACT_APP_API_SERVER_URL}/subjects`).then((res) => {
-          let arr = createArrayOfSubjects(res.data, 50);
+          let arr = createArrayOfSubjects(res.data, 41);
           arr = createTwoColumnArray(arr);
           setSubjects(arr);
         });
