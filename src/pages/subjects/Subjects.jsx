@@ -3,41 +3,32 @@ import { useState, useEffect } from 'react';
 import styles from './Subjects.module.scss';
 import { SubjectCard } from '../../components';
 import axios from 'axios';
+import { useDispatch, useSelector } from "react-redux";
+import { getAllSubjects } from '../../redux/thunks';
 
 
 const Subjects = () => {
 
-  const [subjects, setSubjects] = useState([]);
+  const dispatch = useDispatch();
 
-  useEffect(() => {
-        axios.get(`${process.env.REACT_APP_API_SERVER_URL}/subjects`).then((res) => {
-          let arr = createArrayOfSubjects(res.data, 41);
-          arr = createTwoColumnArray(arr);
-          setSubjects(arr);
-        });
-  }, []);
+  // useEffect(() => {
+  //   dispatch(getAllSubjects());
+  // }, []);
+
+  let subjects = useSelector((store) => store.subjects);
 
   return (
         <div className={styles.contentContainer}>
+          
           <div className={styles.column}>
-            {subjects[0]?.map((subject) => <SubjectCard key={subject.id} subject={subject}/>)}
+            {subjects?.map((subject) => <SubjectCard key={subject.id} subject={subject}/>)}
           </div>
           <div className={styles.column}>
-            {subjects[1]?.map((subject) => <SubjectCard key={subject.id} subject={subject}/>)}
+            {subjects?.map((subject) => <SubjectCard key={subject.id} subject={subject}/>)}
           </div>
         </div>
 );
 };
-
-const createArrayOfSubjects = (subject, count) => {
-  let arr =[];
-  for (let i = 0; i < count; i++) {
-    let newSubject = JSON.parse(JSON.stringify(subject));
-    newSubject.id = 'Very Important Subject ' + Number.parseInt(Math.random()*1000000);
-    arr.push(newSubject);
-  }
-  return arr;
-}
 
 const createTwoColumnArray = (arr) => {
   let arr1 = [];

@@ -2,7 +2,7 @@ import "./App.scss";
 import SideBar from "./modules/SideBar/SideBar";
 import { Outlet, ScrollRestoration, useLocation, useNavigate } from "react-router-dom";
 import Subjects from "./pages/subjects/Subjects";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 const App = () => {
 
