@@ -1,19 +1,22 @@
 import "./App.scss";
 import SideBar from "./modules/SideBar/SideBar";
-import { Outlet, ScrollRestoration, useLocation, useNavigate } from "react-router-dom";
-import Subjects from "./pages/subjects/Subjects";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { getAllSubjects } from './redux/thunks'
 
 const App = () => {
 
   const navigate = useNavigate();
   const location = useLocation();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (location.pathname == '/') {
       navigate('/subjects');
     }
-  }, [])
+    dispatch(getAllSubjects());
+  }, []);
 
   return (
     <div className="app">
