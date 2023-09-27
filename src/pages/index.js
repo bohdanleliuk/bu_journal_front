@@ -4,6 +4,7 @@ import Journal from './journal/Journal';
 import Lessons from './lessons/Lessons';
 import Schedule from './schedule/Schedule';
 import Subjects from './subjects/Subjects';
+import LoginPage from './login/LoginPage';
 
 export {
     Contacts,
@@ -12,4 +13,5 @@ export {
     Lessons,
     Schedule,
     Subjects,
+    LoginPage,
 }

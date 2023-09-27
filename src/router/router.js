@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from '../App';
-import {ErrorPage, Subjects, Journal, Lessons, Schedule, Contacts} from '../pages';
+import {ErrorPage, Subjects, Journal, Lessons, Schedule, Contacts, LoginPage} from '../pages';
 
 const router = createBrowserRouter([
     {
@@ -35,6 +35,11 @@ const router = createBrowserRouter([
         },
       ],
     },
+    {
+      path: "/login",
+      element: <LoginPage/>,
+      errorElement: <ErrorPage />,
+    }
   ])
 
   export default router;
