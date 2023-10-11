@@ -5,8 +5,7 @@ import { addAllSubjects } from '../../actions';
 function getAllSubjects() {
 
     return async function getAllSubjectsThunk(dispatch, getState) {
-        const subject = await getAllSubjectsAsync();
-        const subjects = createArrayOfSubjects(subject, 41);
+        const subjects = await getAllSubjectsAsync();
         dispatch(addAllSubjects(subjects));
     }
 }

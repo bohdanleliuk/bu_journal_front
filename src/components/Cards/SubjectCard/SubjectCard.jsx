@@ -17,7 +17,7 @@ const SubjectCard = ({subject}) => {
 
   return (
     <Card>
-      <MainText>{subject?.id}</MainText>
+      <MainText>{subject?.name}</MainText>
       <div className={styles.iconsContainer}>
         <IconsController iconsHandler={iconsHandler}/>
       </div>

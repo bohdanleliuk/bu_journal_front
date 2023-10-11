@@ -1,5 +1,6 @@
 
 const initialStore = {
+    user: {},
     subjects: [],
 };
 
@@ -10,6 +11,21 @@ const rootReducer = (store = initialStore, action) => {
             subjects: [...action.payload],
         }
     }
+
+    if (action.type == 'login user') {
+        return {
+            ...store,
+            user: {...action.payload},
+        }
+    }
+
+    if (action.type == 'logout user') {
+        return {
+            ...store,
+            user: {},
+        }
+    }
+
     return store;
 };
 

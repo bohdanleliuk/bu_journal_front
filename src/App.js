@@ -2,20 +2,24 @@ import "./App.scss";
 import SideBar from "./modules/SideBar/SideBar";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getAllSubjects } from './redux/thunks'
 
 const App = () => {
 
   const navigate = useNavigate();
-  const location = useLocation();
   const dispatch = useDispatch();
 
+  const user = JSON.parse(localStorage.getItem('user'));
+
   useEffect(() => {
-    if (location.pathname == '/') {
+    console.log('USER FOR LS: ', user);
+    if (user?.username) {
       navigate('/subjects');
+      dispatch(getAllSubjects());
+    } else {
+      navigate('/login');
     }
-    dispatch(getAllSubjects());
   }, []);
 
   return (
